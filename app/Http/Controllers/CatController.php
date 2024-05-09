@@ -49,7 +49,9 @@ class CatController extends Controller
      */
     public function show(Cat $cat)
     {
-        //
+        return view('cats.show', [
+            'cat' => $cat
+        ]);
     }
 
     /**
