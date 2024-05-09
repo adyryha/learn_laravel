@@ -7,7 +7,5 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 
-Route::get('/', [CatController::class, 'index']);{
-
-
-}
+Route::get('/', [CatController::class, 'index']);
+Route::delete('/cats/{cat}', [CatController::class, 'destroy'])->name('cats.destroy');

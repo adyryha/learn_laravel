@@ -31,7 +31,11 @@
                     <td>{{ $cat->age }}</td>
                     <td>{{ $cat->color }}</td>
                     <td>
-                        
+                        <form action="{{ route('cats.destroy', $cat->id) }}" method="POST">
+                            @csrf 
+                            @method('DELETE')
+                            <button type="submit">Delete</button>
+                        </form>
                     </td>
             </tr>
             @empty

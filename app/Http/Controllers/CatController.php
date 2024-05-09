@@ -62,6 +62,8 @@ class CatController extends Controller
      */
     public function destroy(Cat $cat)
     {
-        //
+        $cat->delete();
+        return back();
+        
     }
 }
