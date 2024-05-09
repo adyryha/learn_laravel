@@ -31,6 +31,7 @@
                     <td>{{ $cat->age }}</td>
                     <td>{{ $cat->color }}</td>
                     <td>
+                        <a href="{{route('cats.edit', $cat->id) }}">Edit</a>    
                         <form action="{{ route('cats.destroy', $cat->id) }}" method="POST">
                             @csrf 
                             @method('DELETE')
